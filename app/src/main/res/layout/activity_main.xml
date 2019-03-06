@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/id_main_activity_drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.allever.mycoolweather.modules.weather.ui.MainActivity"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/id_main_activity_iv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:background="@color/alpha_black_8"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                >
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/id_main_activity_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    />
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/id_main_activity_table_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    app:tabIndicatorHeight="1dp"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/gray"
+                    app:tabIndicatorColor="@color/white"/>
+                <!--app:tabMode="scrollable" 可滚动 -->
+
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_main_activity_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+        <!--
+        <FrameLayout
+            android:id="@+id/id_main_activity_frame_layout_fg_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </FrameLayout>
+
+
+        <fragment
+            android:id="@+id/id_main_activity_fragment_weather"
+            android:name="com.allever.mycoolweather.modules.weather.ui.WeatherFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        -->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/id_main_activity_fab_add_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@mipmap/add"
+            app:elevation="8dp"
+            android:layout_gravity="bottom|end"
+            app:layout_behavior="com.allever.mycoolweather.view.MyFabBehavior"/>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/id_main_activity_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu"
+        app:headerLayout="@layout/navigation_header_layout"
+        />
+
+</android.support.v4.widget.DrawerLayout>

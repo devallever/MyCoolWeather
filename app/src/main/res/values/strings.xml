@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">极简天气</string>
+    <string name="history_weather">历史天气</string>
+    <string name="nice_to_meet_you">因为简单,所以好用\n极简天气,就像名字一样,只做好一件事,一个单纯的看天气软件.这么多天气软件, 你选择了我,是我的荣幸\n简介的界面,炫丽的背景,温馨的提示,带给你比一般的体验.
+</string>
+    <string name="setting">设置</string>
+</resources>

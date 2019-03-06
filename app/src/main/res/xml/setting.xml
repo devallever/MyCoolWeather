@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="界面">
+        <SwitchPreference
+            android:title="设置背景"
+            android:key="pref_bg"
+            android:defaultValue="false"/>
+        <Preference
+            android:title="选择图片"
+            android:key="pref_choose_pic"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="系统">
+        <SwitchPreference
+            android:title="通知"
+            android:key="pref_notification"
+            android:defaultValue="true">
+        </SwitchPreference>
+
+        <ListPreference
+            android:title="更新频率"
+            android:key="pref_update_frequency"
+            android:defaultValue="1"
+            android:entries="@array/setting_array_update_frequency"
+            android:entryValues="@array/setting_array_update_frequency_values"
+            android:dialogTitle="设置更新频率"
+            android:positiveButtonText="确定"
+            android:negativeButtonText="取消"/>
+        <Preference
+            android:title="检查更新"
+            android:key="pref_update"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

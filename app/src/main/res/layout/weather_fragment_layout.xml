@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/id_weather_fragment_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#0000">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/id_weather_fragment_tv_real_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="20:00"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/id_weather_fragment_tv_real_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="19`C"
+                        android:layout_below="@id/id_weather_fragment_tv_real_time"
+                        android:textSize="60sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/id_weather_fragment_tv_real_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_weather_fragment_tv_real_temp"
+                        android:text="晴朗"
+                        android:textSize="20sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/white"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:background="@color/alpha_black_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="预报"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp">
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_today_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="2017-04-24"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="今天"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_today_weather"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="多云"
+                            android:gravity="center"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_today_min_tmp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="11"
+                            android:gravity="right"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_today_max_tmp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="21"
+                            android:gravity="right"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp">
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_tomorrow_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="2017-04-24"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="明天"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_tomorrow_weather"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="多云"
+                            android:gravity="center"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_tomorrow_min_tmp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="11"
+                            android:gravity="right"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_tomorrow_max_tmp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="21"
+                            android:gravity="right"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp">
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_after_tomorrow_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="2017-04-24"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="后天"
+                            android:gravity="center"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_after_tomorrow_weather"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="多云"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_after_tomorrow_min_tmp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="11"
+                            android:gravity="right"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/id_weather_fragment_tv_forecast_after_tomorrow_max_tmp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="21"
+                            android:gravity="right"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="15dp"
+                    android:padding="12dp"
+                    android:background="@color/alpha_black_8"
+                    android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小时预报"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                android:layout_margin="15dp"
+                android:padding="12dp"
+                android:background="@color/alpha_black_8">
+
+                <TextView
+                    android:id="@+id/id_weather_fragment_tv_air_quality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="空气质量"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_gravity="center"
+                     android:layout_marginTop="20dp"
+                     android:layout_marginBottom="10dp">
+
+                     <LinearLayout
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:gravity="center_horizontal"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:id="@+id/id_weather_fragment_tv_aqi"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="95"
+                             android:textSize="50sp"
+                             android:textColor="@color/white"/>
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="AQI指数"
+                             android:textColor="@color/white"
+                             android:gravity="center_horizontal"
+                             android:layout_below="@id/id_weather_fragment_tv_aqi"/>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:gravity="center"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:id="@+id/id_weather_fragment_tv_pm25"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="25"
+                             android:textSize="50sp"
+                             android:textColor="@color/white"
+                             android:gravity="center"/>
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="PM2.5指数"
+                             android:textColor="@color/white"
+                             android:gravity="center_horizontal"
+                             android:layout_below="@id/id_weather_fragment_tv_pm25"/>
+
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:padding="12dp"
+                android:background="@color/alpha_black_8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="温馨提示"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/id_weather_fragment_tv_suggestion_comfortable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="舒适度：白天条件不冷不热, 风力不大, 相信您在这样的天气条件下, 应会感觉比较清爽和舒适"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/id_weather_fragment_tv_suggestion_dress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="穿着：白天条件不冷不热, 风力不大, 相信您在这样的天气条件下, 应会感觉比较清爽和舒适"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/id_weather_fragment_tv_suggestion_sport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运动：白天条件不冷不热, 风力不大, 相信您在这样的天气条件下, 应会感觉比较清爽和舒适"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</LinearLayout>

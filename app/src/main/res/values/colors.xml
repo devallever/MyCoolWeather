@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <!-- <color name="colorPrimaryDark">#303F9F</color> -->
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffff</color>
+    <color name="black">#000</color>
+    <color name="gray">#D4D4D4</color>
+
+    <color name="alpha_black_1">#1000</color>
+    <color name="alpha_black_5">#5000</color>
+    <color name="alpha_black_6">#6000</color>
+    <color name="alpha_black_8">#8000</color>
+
+    <color name="alpha_white_1">#1fff</color>
+</resources>
