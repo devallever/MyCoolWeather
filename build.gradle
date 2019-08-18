@@ -6,7 +6,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0-alpha03'
+        classpath 'com.android.tools.build:gradle:3.4.1'
         //as 3.0
         //classpath 'com.android.tools.build:gradle:3.0.0-alpha1'
 //        classpath 'com.android.tools.build:gradle:3.0.1'
